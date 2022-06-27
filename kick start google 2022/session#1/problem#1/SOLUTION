@@ -1,0 +1,17 @@
+/*int solve(N,M,C) {
+    int totale=0;
+    for(int i=0;i<N;i++){
+        totale+=C[i];
+    }
+    
+    remaider=totale // M;
+    return remaider;
+}*/
+int solve (N,M,C){
+    int remainder=0;
+    for(int i=0;i<N;i++){
+        remainder += C[i] // M ;
+        remainder = remainder // M;
+    }
+    return remainder;
+}
