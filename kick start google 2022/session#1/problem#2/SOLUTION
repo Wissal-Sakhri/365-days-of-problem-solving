@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+
+#include <iostream>
+#include <string>
+
 using namespace std;
 
 int getRouler(string name){
@@ -20,32 +23,24 @@ int getRouler(string name){
     else return 2;
 }
 
+// change the output to the alice bob or nobody
 
 
-vector<int> GetHIndexScore(vector<int> citations_per_paper) {
-  vector<int> h_index;
-  // TODO: Calculate and return h-index score for each paper.
-  return h_index;
+string GetRuler(const string& kingdom) {
+  // TODO: implement this method to determine the ruler name, given the kingdom.
+  string ruler = "";
+  return ruler;
 }
 
 int main() {
-  int tests;
-  cin >> tests;
-  for (int test_case = 1; test_case <= tests; test_case++) {
-    // Get number of papers for this test case
-    int paper_count;
-    cin >> paper_count;
-    // Get number of citations for each paper
-    vector<int> citations(paper_count);
-    for (int i = 0; i < paper_count; i++) {
-      cin >> citations[i];
-    }
-    vector<int> answer = GetHIndexScore(citations);
-    cout << "Case #" << test_case << ": ";
-    for (int i = 0; i < answer.size(); i++) {
-      cout << answer[i] << " ";
-    }
-    cout << endl;
+  int testcases;
+  cin >> testcases;
+  string kingdom;
+
+  for (int t = 1; t <= testcases; ++t) {
+    cin >> kingdom;
+    cout << "Case #" << t << ": " << kingdom << " is ruled by "
+         << GetRuler(kingdom) << ".\n";
   }
   return 0;
 }
